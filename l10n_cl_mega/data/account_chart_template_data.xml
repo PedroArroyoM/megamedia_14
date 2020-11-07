@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="cl_chart_template" model="account.chart.template">
+        <field name="use_anglo_saxon" eval="True"/>
+
+        <field name="property_account_receivable_id" ref="1104000100"/>
+        <field name="property_account_payable_id" ref="2105000000"/>
+
+        <field name="property_account_expense_categ_id" ref="4212000001"/>
+        <field name="property_account_income_categ_id" ref="3100000010"/>
+
+        <field name="property_stock_account_input_categ_id" ref="1109000009"/>
+        <field name="property_stock_account_output_categ_id" ref="1109000009"/>
+        <field name="property_stock_valuation_account_id" ref="1109010000"/>
+
+        <field name="income_currency_exchange_account_id" ref="4230000025"/>
+        <field name="expense_currency_exchange_account_id" ref="4230000025"/>
+
+        <field name="default_cash_difference_income_account_id" ref="4230000025"/>
+        <field name="default_cash_difference_expense_account_id" ref="4230000025"/>
+        <field name="default_pos_receivable_account_id" ref="1104000100"/>
+    </record>
+
+    <data noupdate="1">
+        <function model="account.chart.template" name="try_loading">
+            <value eval="[ref('l10n_cl_mega.cl_chart_template')]"/>
+        </function>
+    </data>
+</odoo>

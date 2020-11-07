@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="afpt_non_recoverable_vat_1" model="account.fiscal.position.template">
+            <field name="name">Compras - destinadas a generar operaciones no gravadas o exentas</field>
+            <field name="chart_template_id" ref="l10n_cl_mega.cl_chart_template"/>
+        </record>
+        <record id="afpt_non_recoverable_vat_1_tax" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="l10n_cl_mega.afpt_non_recoverable_vat_1"/>
+            <field name="tax_src_id" ref="l10n_cl_mega.OTAX_19"/>
+            <field name="tax_dest_id" ref="l10n_cl_mega.iva_compra_no_recup"/>
+        </record>
+
+        <record id="afpt_non_recoverable_vat_2" model="account.fiscal.position.template">
+            <field name="name">Compras - Facturas de proveedores registrados fuera de plazo</field>
+            <field name="chart_template_id" ref="l10n_cl_mega.cl_chart_template"/>
+        </record>
+        <record id="afpt_non_recoverable_vat_2_tax" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="afpt_non_recoverable_vat_2"/>
+            <field name="tax_src_id" ref="l10n_cl_mega.OTAX_19"/>
+            <field name="tax_dest_id" ref="l10n_cl_mega.iva_compra_no_recup"/>
+        </record>
+
+        <record id="afpt_non_recoverable_vat_3" model="account.fiscal.position.template">
+            <field name="name">Compras - Gastos rechazados</field>
+            <field name="chart_template_id" ref="l10n_cl_mega.cl_chart_template"/>
+        </record>
+        <record id="afpt_non_recoverable_vat_3_tax" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="afpt_non_recoverable_vat_3"/>
+            <field name="tax_src_id" ref="l10n_cl_mega.OTAX_19"/>
+            <field name="tax_dest_id" ref="l10n_cl_mega.iva_compra_no_recup"/>
+        </record>
+
+        <record id="afpt_non_recoverable_vat_4" model="account.fiscal.position.template">
+            <field name="name">Compras - Entregas gratuitas (premios, bonificaciones, etc.) recibidos</field>
+            <field name="chart_template_id" ref="l10n_cl_mega.cl_chart_template"/>
+        </record>
+        <record id="afpt_non_recoverable_vat_4_tax" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="afpt_non_recoverable_vat_4"/>
+            <field name="tax_src_id" ref="l10n_cl_mega.OTAX_19"/>
+            <field name="tax_dest_id" ref="l10n_cl_mega.iva_compra_no_recup"/>
+       </record>
+        <record id="afpt_non_recoverable_vat_4_account_1" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="afpt_non_recoverable_vat_4"/>
+            <field name="account_src_id" ref="l10n_cl_mega.4120000301"/>
+            <field name="account_dest_id" ref="l10n_cl_mega.4120000302"/>
+        </record>
+        <record id="afpt_non_recoverable_vat_4_account_2" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="afpt_non_recoverable_vat_4"/>
+            <field name="account_src_id" ref="l10n_cl_mega.4120000303"/>
+            <field name="account_dest_id" ref="l10n_cl_mega.4120000304"/>
+       </record>
+
+        <record id="afpt_non_recoverable_vat_9" model="account.fiscal.position.template">
+            <field name="name">Compras - Otros</field>
+            <field name="chart_template_id" ref="l10n_cl_mega.cl_chart_template"/>
+        </record>
+        <record id="afpt_non_recoverable_vat_9_tax" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="afpt_non_recoverable_vat_9"/>
+            <field name="tax_src_id" ref="l10n_cl_mega.OTAX_19"/>
+            <field name="tax_dest_id" ref="l10n_cl_mega.iva_compra_no_recup"/>
+        </record>
+
+        <record id="afpt_fixed_asset" model="account.fiscal.position.template">
+            <field name="name">Compras - Activo Fijo</field>
+            <field name="chart_template_id" ref="l10n_cl_mega.cl_chart_template"/>
+        </record>
+        <record id="afpt_fixed_asset_tax" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="afpt_fixed_asset"/>
+            <field name="tax_src_id" ref="l10n_cl_mega.OTAX_19"/>
+            <field name="tax_dest_id" ref="l10n_cl_mega.iva_activo_fijo_uso_comun"/>
+        </record>
+        <record id="afpt_fixed_asset_account_1" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="afpt_fixed_asset"/>
+            <field name="account_src_id" ref="l10n_cl_mega.4120000305"/>
+            <field name="account_dest_id" ref="l10n_cl_mega.4120000306"/>
+        </record>
+        <record id="afpt_fixed_asset_account_2" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="afpt_fixed_asset"/>
+            <field name="account_src_id" ref="l10n_cl_mega.4120000307"/>
+            <field name="account_dest_id" ref="l10n_cl_mega.4120000308"/>
+        </record>
+
+        <record id="afpt_purchase_exempt" model="account.fiscal.position.template">
+            <field name="name">Compras - Exentas</field>
+            <field name="chart_template_id" ref="l10n_cl_mega.cl_chart_template"/>
+        </record>
+        <record id="afpt_purchase_exempt_tax" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="afpt_purchase_exempt"/>
+            <field name="tax_src_id" ref="l10n_cl_mega.OTAX_19"/>
+        </record>
+        <record id="afpt_purchase_exempt_account" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="afpt_purchase_exempt"/>
+            <field name="account_src_id" ref="l10n_cl_mega.4120000309"/>
+            <field name="account_dest_id" ref="l10n_cl_mega.4120000310"/>
+        </record>
+
+        <record id="afpt_purchase_supermarket" model="account.fiscal.position.template">
+            <field name="name">Compras - Supermercado</field>
+            <field name="chart_template_id" ref="l10n_cl_mega.cl_chart_template"/>
+        </record>
+        <record id="afpt_purchase_supermarket_tax" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="afpt_purchase_supermarket"/>
+            <field name="tax_src_id" ref="l10n_cl_mega.ITAX_19"/>
+            <field name="tax_dest_id" ref="l10n_cl_mega.iva_supermercado_recup"/>
+        </record>
+        <record id="afpt_purchase_supermarket_account" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="afpt_purchase_supermarket"/>
+            <field name="account_src_id" ref="l10n_cl_mega.4120000311"/>
+            <field name="account_dest_id" ref="l10n_cl_mega.4120000312"/>
+        </record>
+        <record id="afpt_purchase_supermarket_account_1" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="afpt_purchase_supermarket"/>
+            <field name="account_src_id" ref="l10n_cl_mega.4120000313"/>
+            <field name="account_dest_id" ref="l10n_cl_mega.4120000340"/>
+        </record>
+
+        <record id="afpt_sale_exempt" model="account.fiscal.position.template">
+            <field name="name">Ventas - Exentas</field>
+            <field name="chart_template_id" ref="l10n_cl_mega.cl_chart_template"/>
+        </record>
+        <record id="afpt_sale_exempt_tax" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="afpt_sale_exempt"/>
+            <field name="tax_src_id" ref="l10n_cl_mega.ITAX_19"/>
+        </record>
+        <record id="afpt_sale_exempt_account" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="afpt_sale_exempt"/>
+            <field name="account_src_id" ref="l10n_cl_mega.4120000600"/>
+            <field name="account_dest_id" ref="l10n_cl_mega.4111000064"/>
+        </record>
+
+    </data>
+</odoo>
