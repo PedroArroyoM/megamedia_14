@@ -7,7 +7,7 @@
         <field name="property_account_payable_id" ref="2105000000"/>
 
         <field name="property_account_expense_categ_id" ref="4212000001"/>
-        <field name="property_account_income_categ_id" ref="3100000010"/>
+        <field name="property_account_income_categ_id" ref="2108000100"/>
 
         <field name="property_stock_account_input_categ_id" ref="1109000009"/>
         <field name="property_stock_account_output_categ_id" ref="1109000009"/>
