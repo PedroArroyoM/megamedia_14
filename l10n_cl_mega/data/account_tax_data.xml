@@ -21,7 +21,7 @@
             (0,0, {
                 'factor_percent': 100,
                 'repartition_type': 'tax',
-                'account_id': ref('1108010001'),
+                'account_id': ref('2108500000'),
                 'plus_report_line_ids': [ref('tax_report_iva_debito_fiscal')],
             }),
         ]"/>
@@ -34,7 +34,7 @@
             (0,0, {
                 'factor_percent': 100,
                 'repartition_type': 'tax',
-                'account_id': ref('1108010001'),
+                'account_id': ref('2108500000'),
                 'minus_report_line_ids': [ref('tax_report_iva_debito_fiscal')],
             }),
         ]"/>
